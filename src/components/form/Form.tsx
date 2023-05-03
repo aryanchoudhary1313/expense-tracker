@@ -23,10 +23,16 @@ export default function Form({ onSubmit }: Props) {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<ExpenseFormData>({ resolver: zodResolver(schema) });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit((data) => {
+        onSubmit(data);
+        reset();
+      })}
+    >
       <div className="form">
         <label className="form-label" htmlFor="description">
           Description
