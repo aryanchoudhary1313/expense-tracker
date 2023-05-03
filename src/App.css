@@ -1,0 +1,21 @@
+.app {
+  margin: auto;
+  padding-bottom: 1em;
+  background-color: rgba(10, 10, 10, 0.961);
+}
+.app h2 {
+  /* margin-top: 0.5em; */
+  padding-inline: 0.4em;
+  padding-top: 0.5em;
+  color: rgb(253, 253, 253);
+}
+table {
+  border-radius: 0.5em;
+}
+tbody,
+th,
+td,
+label,
+input:active {
+  color: white;
+}
